@@ -1,101 +1,150 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 * {
-  /* background-color: rgba(1, 1, 17, 0.905); */
-  /* color: rgba(1, 1, 17, 0.908); */
-  /* margin: auto; */
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-#SocialBox {
-  background-color: #000;
-  position: relative;
-  z-index: 3;
+
+body {
+  font-family: 'Inter', 'Roboto', Helvetica, Arial, sans-serif;
   color: #cacaca;
-  font-family: Inter-Regular, Roboto, Helvetica, Arial, sans-serif;
-  display: grid;
-  justify-content: space-between;
+  background-color: #000;
+}
+
+#SocialBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #000;
+  color: #cacaca;
   text-align: left;
-  font-family: Inter-Regular, Roboto, Helvetica, Arial, sans-serif;
-  font-size: 14px;
 }
+
+#brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
 #SocialLogo {
-  height: fit-content;
+  width: 150px;
+  margin-bottom: 20px;
 }
+
 #SocialLogo > img {
   width: 100%;
 }
+
 #intro {
-  text-align: left;
-  cursor: default;
-  margin: 0;
-  color: #cacaca;
   font-size: 14px;
-  font-family: Inter-Regular, Roboto, Helvetica, Arial, sans-serif;
   letter-spacing: 0.5px;
   line-height: 22px;
-  width: 400px;
-  padding-top: 40px;
+  text-align: center;
+  margin-bottom: 20px;
 }
-@media (max-width: 768px) {
-  #intro {
-    display: none;
-  }
-  #SocialLogo {
-    width: 90px;
-  }
-  #brand {
-    grid-column: 1 / 3;
-    height: fit-content;
-  }
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.LinkBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.LinkBox p {
+  padding: 1vh 0;
+  font-size: large;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.LinkBox p:hover {
+  color: #ffffff;
+}
+
+#Links4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#Links4 > div > a > img {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+#Links4 #five-black {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 250px;
+  margin-top: 20px;
+}
+
+#Links4 #five-black div {
+  margin: 0 5px;
+}
+
+#Links4 #five-black img {
+  width: 32px;
+}
+
+@media (min-width: 768px) {
   #SocialBox {
-    grid-template-columns: repeat(2, 1fr);
-    height: 405px;
-    padding: 40px 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 100px 80px;
+    height: auto;
   }
-}
-@media (min-width: 769px) {
+
+  #brand {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
+
   #SocialLogo {
     width: 150px;
   }
-  #SocialBox {
-    grid-template-columns: repeat(5, 1fr);
-    height: 235px;
-    padding: 100px 80px;
-  }
-}
 
-#Links1,#Links2,#Links3{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: left;
-}
-#Links4 > div > a > img {
-  width: 50%;
-  background-color: black;
-}
-#Links4 > :last-child {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: black;
-}
-#social-div > div > div {
-  background-color: black;
-}
-#Links4 > :last-child {
-  background-color: black;
-  /* border: 1px solid green; */
-}
-#Links4 > div img {
-  width: 50%;
-  background-color: black;
-}
-.black {
-  background-color: black;
-  border: 1px solid red;
-}
-#Links4 #five-black {
-  background-color: black;
+  #intro {
+    width: 400px;
+    text-align: left;
+    padding-top: 40px;
+  }
+
+  .links {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+  }
+
+  .LinkBox {
+    width: auto;
+    align-items: flex-start;
+  }
+
+  #Links4 > div > a > img {
+    width: 178px;
+  }
+
+  #Links4 #five-black {
+    max-width: none;
+  }
+
+  #Links4 #five-black img {
+    width: 32px;
+  }
 }
